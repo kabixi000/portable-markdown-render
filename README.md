@@ -8,4 +8,5 @@ portable-markdown-render は markdown を HTML 形式にレンダリングする
 
 ## 参考
 [sample.html](sample.html) に markdown のサンプルがあるので適宜参考
+
 [preview.md](preview.md) は `sample.html` 内に記載されている markdown となっている
