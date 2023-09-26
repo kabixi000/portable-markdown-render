@@ -224,7 +224,7 @@ pre code.mermaid svg {
 </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.min.js"></script>
     <script>
       // OFFLINE MODE Module Version
@@ -238,8 +238,8 @@ pre code.mermaid svg {
       if(window.mermaid != null){mermaid.initialize({ startOnLoad: false, theme: isDarkMode?'dark':'default' })}
       marked.setOptions({langPrefix:''})
       document.getElementById('content').innerHTML = marked.parse(document.getElementById('mkdwn').innerHTML)
-      if(window.mermaid != null){mermaid.init()}
-      if(window.hljs != null){hljs.configure({cssSelector:'pre code:not(.mermaid)'});hljs.highlightAll()}
+      if(window.mermaid != null){mermaid.init(undefined,'.language-mermaid')}
+      if(window.hljs != null){hljs.configure({cssSelector:'pre code:not(.language-mermaid)'});hljs.highlightAll()}
       Array.from(document.getElementsByTagName('input')).filter(inp=>inp.type==='checkbox').forEach((inp)=>{inp.removeAttribute('disabled');inp.addEventListener('click',(e)=>{e.target.checked=!e.target.checked})})
       document.getElementById('fileName').innerText = decodeURI((new URL(location.href)).pathname.split('/').pop())
     </script>
