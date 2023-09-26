@@ -8,6 +8,7 @@
   <body>
     <p id="fileName"></p>
     <div id="content"></div>
+    <p id="footer"><a href="https://github.com/kabixi000/portable-markdown-render" target="_blank">portable-markdown-render - GitHub</a></p>
 <script type="text/template" id="mkdwn">
 <!-- 以下に markdown を記入 -->
 
@@ -98,10 +99,20 @@ pre code.mermaid svg {
   display: block;
   margin: 0 auto;
 }
-#fileName{
+#fileName {
   font-family: consolas;
   font-weight: bolder;
   color: #539bf5;
+}
+#footer,#footer a:visited{
+  border-top: 4px solid var(--border-color);
+  padding-top: 24px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: consolas;
+  font-weight: bolder;
+  opacity: 0.75;
+  color: #8d98a5;
 }
 </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark-dimmed.min.css">
@@ -124,6 +135,8 @@ pre code.mermaid svg {
       if(window.hljs != null){hljs.configure({cssSelector:'pre code:not(.language-mermaid)'});hljs.highlightAll()}
       Array.from(document.getElementsByTagName('input')).filter(inp=>inp.type==='checkbox').forEach((inp)=>{inp.removeAttribute('disabled');inp.addEventListener('click',(e)=>{e.target.checked=!e.target.checked})})
       document.getElementById('fileName').innerText = decodeURI((new URL(location.href)).pathname.split('/').pop())
+Array.from(document.getElementsByTagName('img')).forEach(e=>e.className+=' preview-target')
     </script>
+<script src="https://kabixi000.github.io/img-preview-modal/img-preview-modal.js" defer></script>
   </body>
 </html>
