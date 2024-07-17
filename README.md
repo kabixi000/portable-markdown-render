@@ -7,6 +7,8 @@ portable-markdown-render は markdown を HTML 形式にレンダリングする
 1. ブラウザなどで開く
 
 ## 参考
+`sample.html` の実際の見え方は [GitHub Pages](https://kabixi000.github.io/portable-markdown-render/sample.html) にある
+
 [sample.html](sample.html) に markdown のサンプルがあるので適宜参考
 
 [preview.md](preview.md) は `sample.html` 内に記載されている markdown となっている
